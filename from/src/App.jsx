@@ -4,6 +4,7 @@ import axios from 'axios';
 function App() {
   const [name, setName] = useState('')
   const [roll, setRoll] = useState('')
+  const [password, setpassword] = useState('')
   const [className, setClassName] = useState('')
   const [department, setDepartment] = useState('')
 
@@ -13,6 +14,7 @@ function App() {
     const data = {
       name,
       roll,
+      password,
       class: className,
       department,
     }
@@ -68,6 +70,18 @@ function App() {
           id="class"
           value={className}
           onChange={(e) => setClassName(e.target.value)}
+          required
+          className="mt-2 p-3 w-full border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
+        />
+      </div>
+
+      <div>
+        <label htmlFor="class" className="block text-gray-700 font-semibold">Password:</label>
+        <input
+          type="text"
+          id="class"
+          value={Password}
+          onChange={(e) => setpassword(e.target.value)}
           required
           className="mt-2 p-3 w-full border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
         />
