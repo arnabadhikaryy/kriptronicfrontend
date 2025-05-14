@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 
 const LoginForm = () => {
-  const [name, setName] = useState('');
+  const [password, setpassword] = useState('');
   const [roll, setRoll] = useState('');
   const [message, setMessage] = useState('');
 
@@ -12,7 +12,7 @@ const LoginForm = () => {
 
     
     const data = {
-      name: name,
+      password: password,
       roll: roll,
     };
 
@@ -40,10 +40,10 @@ const LoginForm = () => {
         <h2 className="text-2xl font-semibold text-center mb-4">Login</h2>
         <form onSubmit={handleSubmit}>
           <div className="mb-4">
-            <label className="block text-gray-700">Name:</label>
+            <label className="block text-gray-700">password</label>:</label>
             <input
               type="text"
-              value={name}
+              value={password}
               onChange={(e) => setName(e.target.value)}
               className="w-full p-2 mt-2 border rounded-md"
               placeholder="Enter your name"
